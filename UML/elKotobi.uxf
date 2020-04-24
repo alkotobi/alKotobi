@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>56</y>
+      <w>344</w>
+      <h>536</h>
+    </coordinates>
+    <panel_attributes>/MNField/
+--
+properties
+-
+   - QString name;
+    -QString type;
+    -QVariant value;
+    -bool indexed=false;
+    -bool visible =true;
+    -bool readOnly =false;
+    -bool generated =true;
+    -QString caption ="";
+    -int width =50;
+-
+methods
+--
+    +explicit MNField(QString name,QVariant val,QObject *parent = nullptr);
+    +QString getName() const;
+    +void setName(const QString &amp;value);
+    +QString getType() const;
+    +void setType(const QString &amp;value);
+    +QVariant getValue() const;
+    +void setValue(const QVariant &amp;value);
+    +bool isIndexed() const;
+    +void setIndexed(bool value);
+    +bool isVisible() const;
+    +void setVisible(bool value);
+    +bool isReadOnly() const;
+    +void setReadOnly(bool value);
+    +QString getCaption() const;
+    +void setCaption(const QString &amp;value);
+    +int getWidth() const;
+    +void setWidth(int value);
+    +bool isGenerated() const;
+    +void setGenerated(bool value);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>136</y>
+      <w>272</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>MNRecord
+using  ptrMNField = QPointer&lt;MNField&gt;;
+-
+properties
+--
+-QVector&lt;ptrMNField&gt; record;
+-
+methods
+--
+    +explicit MNRecord(QObject *parent = nullptr);
+    +void append(ptrMNField ptrFld);
+    +ptrMNField getField(int ind);
+    QString createTableSql(QString tableName);
+    QString createIndexSql(QString tableName,ptrMNField fld);
+    QString insertSql(QString tableName);
+    int count();
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>184</y>
+      <w>208</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n
+m1=1</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>976</x>
+      <y>248</y>
+      <w>416</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>MNDb
+-
+properties
+--
+    -QSqlDatabase db;
+    -QSqlQuery query;
+    -QString name;
+-
+methodes
+--
+  ` explicit MNDb(QString dbPath, QString dbName, QObject *parent = nullptr);
+    ~MNDb() ;
+    bool runSql(QString sql);
+    bool runSqlTran(QString sql);
+    bool open();
+    void close();
+    bool pragmaFast();
+    bool pragmaNormal();
+    void startTrans();
+    bool commitTrans();
+    bool rollbackTrans();
+    bool runSqlWithTran(QString sql);
+    QSqlTableModel *getTableModel(QString tableName, QString whereSql);
+    QSqlQueryModel *getQueryModel(QString sql);
+    bool isTableExists(QString tableName);
+    QSqlQuery getQuery();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>856</x>
+      <y>0</y>
+      <w>264</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>MNpathes
+--
+properties
+--
+
+
+--
+methodes
+--
+   - static QString getAppDataDir();
+   - static bool createKotobDir();
+   + MNpathes();
+   + static bool createAppDataDir();
+   + static QString getKotobDir();
+   + static bool createAppDataDirStructre();</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
