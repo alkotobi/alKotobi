@@ -4,6 +4,9 @@
 #include <QString>
 #include <QDir>
 #include <QStandardPaths>
+#include <QFileDialog>
+
+static const QString KotobDbName="kotob.db";
 class MNpathes
 {
     static QString getAppDataDir();
@@ -13,6 +16,9 @@ public:
     static bool createAppDataDir();
     static QString getKotobDir();
     static bool createAppDataDirStructre();
+    static QStringList getFilesPathes();
+    static QString getFileName(QString path);
+    static QString getKotobDbPath();
 };
 
 #endif // MNPATHES_H

@@ -40,3 +40,26 @@ bool MNpathes::createAppDataDirStructre()
     return createKotobDir();
 
 }
+
+QStringList MNpathes::getFilesPathes()
+{
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setViewMode(QFileDialog::Detail);
+    QStringList fileNames;
+    if (dialog.exec())
+        fileNames = dialog.selectedFiles();
+
+    return  fileNames;
+}
+
+QString MNpathes::getFileName(QString path)
+{
+    QFileInfo fi(path);
+    return  fi.fileName();
+}
+
+QString MNpathes::getKotobDbPath()
+{
+    return getKotobDir()+KotobDbName;
+}

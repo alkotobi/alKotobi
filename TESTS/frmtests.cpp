@@ -83,3 +83,35 @@ void frmTests::on_testPointer_clicked()
 {
 
 }
+
+void frmTests::on_testImport_clicked()
+{
+    //choose the dbOriginal
+    QStringList filePathes= MNpathes::getFilesPathes();
+    if(filePathes.isEmpty()) return;//if no file selcted exit
+    foreach(QString filePath ,filePathes){
+        //connect db to path
+        MNDb dbSource(filePath,MNpathes::getFileName(filePath),this);
+
+        //create destination dataBase
+        MNDb dbDest(MNpathes::getKotobDir()+MNpathes::getFileName(filePath)
+                    ,MNpathes::getFileName(filePath)+"dest",this);
+
+
+        //register the book in Books db
+
+        MNDb dbKotob(MNpathes::getKotobDbPath(),KotobDbName,this);
+
+        //create book words table
+
+        // register words in main words
+
+        // create pages range table
+
+        //create contnents table
+
+        // create linked books ???
+    }
+
+
+}

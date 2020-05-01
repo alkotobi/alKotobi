@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "./CORE/mnfield.h"
 #include "./CORE/mnrecord.h"
+#include "./HELPERS/mnpathes.h"
+#include "./DB/mndb.h"
 
 namespace Ui {
 class frmTests;
@@ -29,6 +31,8 @@ private slots:
     void on_testCore_clicked();
 
     void on_testPointer_clicked();
+
+    void on_testImport_clicked();
 
 private:
     Ui::frmTests *ui;
