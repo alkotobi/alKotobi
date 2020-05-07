@@ -21,6 +21,17 @@ SOURCES += \
     DB/mndb.cpp \
     HELPERS/mnpathes.cpp \
     TESTS/frmtests.cpp \
+    common/mncommon.cpp \
+    common/mnkotob.cpp \
+    common/mnmainkalimat.cpp \
+    common/mnothors.cpp \
+    import/mnimport.cpp \
+    import/mnindexorg.cpp \
+    import/mnkitaborg.cpp \
+    import/mnothororg.cpp \
+    kitab/mnindex.cpp \
+    kitab/mnkalimat.cpp \
+    kitab/mnkitab.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -30,6 +41,17 @@ HEADERS += \
     DB/mndb.h \
     HELPERS/mnpathes.h \
     TESTS/frmtests.h \
+    common/mncommon.h \
+    common/mnkotob.h \
+    common/mnmainkalimat.h \
+    common/mnothors.h \
+    import/mnimport.h \
+    import/mnindexorg.h \
+    import/mnkitaborg.h \
+    import/mnothororg.h \
+    kitab/mnindex.h \
+    kitab/mnkalimat.h \
+    kitab/mnkitab.h \
     mainwindow.h
 
 FORMS += \

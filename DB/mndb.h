@@ -33,6 +33,7 @@ public:
     QSqlQueryModel *getQueryModel(QString sql);
     bool isTableExists(QString tableName);
     QSqlQuery getQuery();
+    QSqlQuery newQuery(QString sql);//use this to create new select query
 
 
 signals:

@@ -5,12 +5,20 @@ QSqlQuery MNDb::getQuery()
     return query;
 }
 
+QSqlQuery MNDb::newQuery(QString sql)
+{
+   QSqlQuery query = QSqlQuery(db);
+   query.exec(sql);
+   return query;
+}
+
 
 
 MNDb::MNDb(QString dbPath,QString dbName , QObject *parent) : QObject(parent)
 {
     db=QSqlDatabase::addDatabase("QSQLITE",dbName);
     db.setDatabaseName(dbPath);
+    db.open();
     query = QSqlQuery(db);
     this->name =dbName;
 

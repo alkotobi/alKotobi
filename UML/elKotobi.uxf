@@ -121,7 +121,8 @@ methodes
     QSqlTableModel *getTableModel(QString tableName, QString whereSql);
     QSqlQueryModel *getQueryModel(QString sql);
     bool isTableExists(QString tableName);
-    QSqlQuery getQuery();</panel_attributes>
+    QSqlQuery getQuery();
+    QSqlQuery newQuery(QString sql);</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -130,7 +131,7 @@ methodes
       <x>856</x>
       <y>0</y>
       <w>264</w>
-      <h>184</h>
+      <h>224</h>
     </coordinates>
     <panel_attributes>MNpathes
 --
