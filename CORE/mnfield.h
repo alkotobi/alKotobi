@@ -24,10 +24,10 @@ public:
     explicit MNField(QString name,QVariant val,QObject *parent = nullptr);
 
     QString getName() const;
-    void setName(const QString &value);
+    void setName(const QString value);
 
     QString getType() const;
-    void setType(const QString &value);
+    void setType(const QString value);
 
     QVariant getValue() const;
     void setValue(const QVariant &value);
@@ -42,7 +42,7 @@ public:
     void setReadOnly(bool value);
 
     QString getCaption() const;
-    void setCaption(const QString &value);
+    void setCaption(const QString value);
 
     int getWidth() const;
     void setWidth(int value);

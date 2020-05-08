@@ -19,6 +19,7 @@ SOURCES += \
     CORE/mnfield.cpp \
     CORE/mnrecord.cpp \
     DB/mndb.cpp \
+    DB/mnquery.cpp \
     HELPERS/log.cpp \
     HELPERS/mnpathes.cpp \
     TESTS/frmtests.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     CORE/mnfield.h \
     CORE/mnrecord.h \
     DB/mndb.h \
+    DB/mnquery.h \
     HELPERS/log.h \
     HELPERS/mnpathes.h \
     TESTS/frmtests.h \
@@ -47,6 +49,7 @@ HEADERS += \
     common/mnkotob.h \
     common/mnmainkalimat.h \
     common/mnothors.h \
+    headers.h \
     import/mnimport.h \
     import/mnindexorg.h \
     import/mnkitaborg.h \

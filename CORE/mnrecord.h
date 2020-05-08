@@ -19,7 +19,7 @@ public:
     void append(ptrMNField ptrFld);
     ptrMNField getField(int ind);
     QString createTableSql(QString tableName);
-    QString createIndexSql(QString tableName,ptrMNField fld);
+    QString createIndexSql(QString tableName, ptrMNField fld);
     QString insertSql(QString tableName);
     int count();
 

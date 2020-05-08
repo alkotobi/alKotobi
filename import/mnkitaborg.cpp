@@ -1,26 +1,26 @@
 #include "mnkitaborg.h"
 
-MNKitabOrg::MNKitabOrg(MNDb *db,QObject *parent) : QObject(parent)
+MNKitabOrg::MNKitabOrg(MNDb &db,QObject *parent) : QObject(parent)
 {
     QString tableName;
-    QSqlQuery query= db->newQuery("select Bkid from Main");
-    if (query.first()){
-         tableName = "b"+query.value(0).toString();
+    queryKitab= QSharedPointer<MNQuery>(new MNQuery(db,this));
+    if (queryKitab->first()){
+         tableName = "b"+queryKitab->value(0).toString();
     }
-    query.exec("select * from "+tableName);
-    query.first();
-    this->queryKitab =query;
+    queryKitab->runSql("select * from "+tableName);
+    queryKitab->first();
+
     //dont forget query.first;
 }
 
 QString MNKitabOrg::getNass()
 {
-    return queryKitab.value("nass").toString();
+    return queryKitab->value("nass").toString();
 }
 
 int MNKitabOrg::getID()
 {
-    return queryKitab.value("id").toInt();
+    return queryKitab->value("id").toInt();
 }
 
 

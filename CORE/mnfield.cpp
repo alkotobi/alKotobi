@@ -5,7 +5,7 @@ QString MNField::getName() const
     return name;
 }
 
-void MNField::setName(const QString &value)
+void MNField::setName(const QString value)
 {
     name = value;
 }
@@ -15,7 +15,7 @@ QString MNField::getType() const
     return type;
 }
 
-void MNField::setType(const QString &value)
+void MNField::setType(const QString value)
 {
     type = value;
 }
@@ -65,7 +65,7 @@ QString MNField::getCaption() const
     return caption;
 }
 
-void MNField::setCaption(const QString &value)
+void MNField::setCaption(const QString value)
 {
     caption = value;
 }
@@ -90,7 +90,7 @@ void MNField::setGenerated(bool value)
     generated = value;
 }
 
-MNField::MNField(QString name,QVariant val,QObject *parent) : QObject(parent)
+MNField::MNField(QString name, QVariant val, QObject *parent) : QObject(parent)
 {
     this->name =name;
     this->value =val;

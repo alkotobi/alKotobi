@@ -13,11 +13,11 @@
 class MNImport : public QObject
 {
     Q_OBJECT
-    //MNDb dbSource;
+    QPointer<MNDb> dbSource;
     QPointer<MNKitabOrg> kitabOrg;
 
 public:
-    explicit MNImport(MNDb db, QObject *parent = nullptr);
+    explicit MNImport(MNDb &db, QObject *parent = nullptr);
     ~MNImport();
 
 

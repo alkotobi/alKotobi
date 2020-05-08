@@ -3,13 +3,14 @@
 
 #include <QObject>
 #include "./DB/mndb.h"
+#include "./DB/mnquery.h"
 
 class MNKitabOrg : public QObject
 {
     Q_OBJECT
-    QSqlQuery queryKitab;
+   QSharedPointer<MNQuery>  queryKitab;
 public:
-    explicit MNKitabOrg(MNDb *db, QObject *parent = nullptr);
+    explicit MNKitabOrg(MNDb &db, QObject *parent = nullptr);
     QString getNass();
     int getID();
 
