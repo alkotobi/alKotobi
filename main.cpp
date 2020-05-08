@@ -2,14 +2,15 @@
 
 #include <QApplication>
 #include "./HELPERS/log.h"
+#include "./CORE/app.h"
 #include <QDebug>
 
 #define STD_OUT QTextStream(stdout)
 
 int main(int argc, char *argv[])
 {
-
-    MN_ERROR("I am sorry");
+    MNApp::init();
+    MN_SUCCESS("I am sorry");
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

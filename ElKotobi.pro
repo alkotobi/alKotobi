@@ -16,6 +16,7 @@ INCLUDEPATH += /Users/merhab/Desktop/alKotobi/vendor/spdlog/include
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CORE/app.cpp \
     CORE/mnfield.cpp \
     CORE/mnrecord.cpp \
     DB/mndb.cpp \
@@ -38,6 +39,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    CORE/app.h \
     CORE/mnfield.h \
     CORE/mnrecord.h \
     DB/mndb.h \

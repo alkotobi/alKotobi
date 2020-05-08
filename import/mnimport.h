@@ -9,19 +9,22 @@
 #include "./kitab/mnkitab.h"
 #include "./DB/mndb.h"
 #include <QPointer>
+#include "HELPERS/mnpathes.h"
 
 class MNImport : public QObject
 {
     Q_OBJECT
-    QPointer<MNDb> dbSource;
-    QPointer<MNKitabOrg> kitabOrg;
+
 
 public:
-    explicit MNImport(MNDb &db, QObject *parent = nullptr);
+    explicit MNImport(QString sourceDbPAth, QObject *parent = nullptr);
     ~MNImport();
+    QPointer<MNDb> dbSource;
+    QPointer<MNDb> dbDest;
+    QPointer<MNKitabOrg> kitabOrg;
+    QPointer<MNKitab> kitabDest;
 
 
-    QPointer<MNKitabOrg> getKitabOrg() const;
 
 signals:
 

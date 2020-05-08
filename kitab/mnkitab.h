@@ -2,12 +2,15 @@
 #define MNKITAB_H
 
 #include <QObject>
+#include "./DB/mndb.h"
 
 class MNKitab : public QObject
 {
     Q_OBJECT
+    QPointer<MNDb> dbKitab;
 public:
-    explicit MNKitab(QObject *parent = nullptr);
+    explicit MNKitab(MNDb *kitabDb,QObject *parent = nullptr);
+
 
 signals:
 

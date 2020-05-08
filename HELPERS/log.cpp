@@ -32,7 +32,7 @@ void Log::showInfo(QString msg)
 
 void Log::showSuccess(QString msg)
 {
-    STD_OUT << QString("  \033[47m|\033[0m\033[1;97;42m Build     \033[0m \033[1;32m%1\033[0m").arg(formatMessage(msg)) << endl;
+    STD_OUT << QString("  \033[47m|\033[0m\033[1;97;42m SUCCESS     \033[0m \033[1;32m%1\033[0m").arg(formatMessage(msg)) << endl;
 
 }
 

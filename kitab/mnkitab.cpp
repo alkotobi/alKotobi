@@ -1,6 +1,7 @@
 #include "mnkitab.h"
 
-MNKitab::MNKitab(QObject *parent) : QObject(parent)
-{
 
+MNKitab::MNKitab(MNDb *kitabDb,QObject *parent) : QObject(parent)
+{
+    this->dbKitab = kitabDb;
 }

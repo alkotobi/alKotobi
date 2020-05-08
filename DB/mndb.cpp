@@ -11,7 +11,7 @@ MNDb::MNDb(QString dbPath,QString dbName , QObject *parent) : QObject(parent)
 
 MNDb::~MNDb()
 {
-
+    close();
 }
 
 bool MNDb::open(){
