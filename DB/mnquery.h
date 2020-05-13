@@ -12,7 +12,7 @@ class MNQuery : public QObject
     QString dbName;
 public:
     QSharedPointer<QSqlQuery> query;
-    explicit MNQuery(MNDb *db, QObject *parent = nullptr);
+    explicit MNQuery(QString dbName, QObject *parent = nullptr);
     bool runSql(QString sql);
     bool pragmaFast();
     bool pragmaNormal();

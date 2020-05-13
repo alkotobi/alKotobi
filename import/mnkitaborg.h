@@ -10,7 +10,7 @@ class MNKitabOrg : public QObject
     Q_OBJECT
    QSharedPointer<MNQuery>  queryKitab;
 public:
-    explicit MNKitabOrg(MNDb* db, QObject *parent = nullptr);
+    explicit MNKitabOrg(QString dbName, QObject *parent = nullptr);
     QString getNass();
     int getID();
 

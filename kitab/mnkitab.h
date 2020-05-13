@@ -7,9 +7,9 @@
 class MNKitab : public QObject
 {
     Q_OBJECT
-    QPointer<MNDb> dbKitab;
+    QString dbName;
 public:
-    explicit MNKitab(MNDb *kitabDb,QObject *parent = nullptr);
+    explicit MNKitab(QString dbName,QObject *parent = nullptr);
 
 
 signals:

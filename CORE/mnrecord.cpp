@@ -2,8 +2,9 @@
 
 MNRecord::MNRecord(QObject *parent) : QObject(parent)
 {
-    ptrMNField ptrFld =new MNField("ID",-1,this);
-    record.append(ptrFld);
+
+    record.append(new MNField("ID",-1,this));
+    record.append(new MNField("IdParent",-1,this));
 }
 
 void MNRecord::append(ptrMNField ptrFld)

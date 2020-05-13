@@ -1,9 +1,9 @@
 #include "mnkitaborg.h"
 
-MNKitabOrg::MNKitabOrg(MNDb *db, QObject *parent) : QObject(parent)
+MNKitabOrg::MNKitabOrg(QString dbName, QObject *parent) : QObject(parent)
 {
     QString tableName;
-    queryKitab= QSharedPointer<MNQuery>(new MNQuery(db,this));
+    queryKitab= QSharedPointer<MNQuery>(new MNQuery(dbName,this));
     if (queryKitab->first()){
          tableName = "b"+queryKitab->value(0).toString();
     }

@@ -9,6 +9,8 @@
 
 int main(int argc, char *argv[])
 {
+    qWarning("hahahahah");
+    //QMetaObject
     MNApp::init();
     MN_SUCCESS("I am sorry");
     QApplication a(argc, argv);

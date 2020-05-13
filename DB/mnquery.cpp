@@ -1,10 +1,10 @@
 #include "mnquery.h"
 
 
-MNQuery::MNQuery(MNDb *db, QObject *parent) : QObject(parent)
+MNQuery::MNQuery(QString dbName, QObject *parent) : QObject(parent)
 {
-        this->query= QSharedPointer<QSqlQuery>(new QSqlQuery(db->db));
-        this->dbName = db->name;
+        this->query= QSharedPointer<QSqlQuery>(new QSqlQuery(QSqlDatabase::database(dbName)));
+        this->dbName = dbName;
 
 }
 

@@ -19,8 +19,10 @@ SOURCES += \
     CORE/app.cpp \
     CORE/mnfield.cpp \
     CORE/mnrecord.cpp \
+    CORE/mnrecordset.cpp \
     DB/mndb.cpp \
     DB/mnquery.cpp \
+    DB/mnsql.cpp \
     HELPERS/log.cpp \
     HELPERS/mnpathes.cpp \
     TESTS/frmtests.cpp \
@@ -42,8 +44,10 @@ HEADERS += \
     CORE/app.h \
     CORE/mnfield.h \
     CORE/mnrecord.h \
+    CORE/mnrecordset.h \
     DB/mndb.h \
     DB/mnquery.h \
+    DB/mnsql.h \
     HELPERS/log.h \
     HELPERS/mnpathes.h \
     TESTS/frmtests.h \
